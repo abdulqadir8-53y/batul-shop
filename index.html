@@ -351,7 +351,7 @@ function route(){
   document.title="Batul Industries – Home & Lifestyle, Delivered Free";
   if(parts[0]==="p"&&parts[1])return productPage(parts.slice(1).join("/"));
   if(parts[0]==="cart")return cartPage();
-  if(parts[0]==="checkout")return checkoutPage();
+  if(parts[0]==="checkout")return cartPage();
   if(parts[0]==="c"&&parts[1]){var cat=state.catById[parts[1]];return listing({title:cat?cat.category_name:"Products",params:{category_id:parts[1]}})}
   if(parts[0]==="s"&&parts[1]){document.getElementById("q").value=parts[1];return listing({title:'Results for "'+parts[1]+'"',params:{search:parts[1]}})}
   listing({title:"All products",params:{},home:true});
