@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batul Industries – Home & Lifestyle, Delivered Free</title>
+<meta name="description" content="Home, kitchen, bath and lifestyle products with free delivery across India. Order on WhatsApp, no login needed.">
+<meta property="og:title" content="Batul Industries – Order on WhatsApp, free delivery">
+<meta property="og:description" content="Browse 5,000+ home, kitchen and lifestyle products. No login. Send your cart on WhatsApp and pay by UPI.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0b8a5b;--g2:#07704a;--gl:#e8f5ef;--ink:#1d2327;--mut:#667078;--line:#e3e7ea;--bg:#f4f6f7;--red:#c0392b;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Open Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);font-size:15px}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+header{background:var(--g);color:#fff;position:sticky;top:0;z-index:20}
+.hd{max-width:1200px;margin:auto;display:flex;align-items:center;gap:14px;padding:10px 16px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{width:36px;height:36px;border-radius:6px;background:#fff;object-fit:contain}
+.brand b{display:block;font-size:16px;white-space:nowrap}
+.brand small{display:block;font-size:11px;opacity:.85;white-space:nowrap}
+.search{flex:1;display:flex;background:#fff;border-radius:8px;overflow:hidden;min-width:0}
+.search input{flex:1;border:0;padding:10px 12px;font:inherit;min-width:0;outline:none}
+.search button{border:0;background:var(--g2);color:#fff;padding:0 16px;margin:4px;border-radius:6px;font-weight:600}
+.cartbtn{position:relative;background:transparent;border:0;color:#fff;padding:6px;display:flex;align-items:center;gap:6px;font-weight:600}
+.cartbtn .n{position:absolute;top:-2px;right:-6px;background:#ffcc33;color:#000;border-radius:10px;font-size:11px;padding:1px 6px;font-weight:700}
+.strip{background:#fff;border-bottom:1px solid var(--line);font-size:13px}
+.strip div{max-width:1200px;margin:auto;padding:7px 16px;color:var(--mut)}
+.strip b{color:var(--g)}
+main{max-width:1200px;margin:auto;padding:16px}
+.cats{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.cat{flex:0 0 auto;width:86px;text-align:center;font-size:12px;color:var(--ink)}
+.cat img{width:64px;height:64px;border-radius:50%;object-fit:cover;background:#fff;border:2px solid var(--line);display:block;margin:0 auto 4px}
+.cat.on img{border-color:var(--g)}
+.cat span{display:block;line-height:1.25;max-height:2.5em;overflow:hidden}
+.banners{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0}
+.bn{background:linear-gradient(135deg,var(--g),#13a372);color:#fff;border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:110px}
+.bn small{opacity:.85;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.bn h3{margin:4px 0 8px;font-size:18px}
+.bn span{background:#fff;color:var(--g);padding:5px 10px;border-radius:6px;font-size:12px;font-weight:700}
+.bn img{width:84px;height:84px;object-fit:contain;border-radius:8px;background:#ffffff22}
+h2{font-size:19px;margin:18px 0 10px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+h2 small{font-size:13px;color:var(--mut);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.pc .im{aspect-ratio:1;background:#fafafa;position:relative}
+.pc .im img{width:100%;height:100%;object-fit:contain}
+.off{position:absolute;top:8px;left:8px;background:var(--g);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px}
+.pc .bd{padding:9px 10px 11px;display:flex;flex-direction:column;gap:5px;flex:1}
+.pc .t{font-size:13px;line-height:1.3;height:2.6em;overflow:hidden}
+.pr{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.pr b{font-size:16px}
+.pr s{color:var(--mut);font-size:12px}
+.rt{font-size:12px;color:var(--mut)}
+.rt i{font-style:normal;background:var(--g);color:#fff;padding:0 5px;border-radius:4px;font-weight:700;margin-right:3px}
+.qa{margin-top:auto;border:1px solid var(--g);color:var(--g);background:#fff;border-radius:7px;padding:7px;font-weight:600;font-size:13px}
+.qa:hover{background:var(--gl)}
+.more{display:block;margin:18px auto;background:var(--g);color:#fff;border:0;border-radius:8px;padding:11px 26px;font-weight:600}
+.empty,.load{padding:40px;text-align:center;color:var(--mut)}
+/* product */
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.gal .main{aspect-ratio:1;background:#fafafa;border-radius:10px;overflow:hidden}
+.gal .main img{width:100%;height:100%;object-fit:contain}
+.thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto}
+.thumbs img{width:62px;height:62px;object-fit:contain;border:2px solid var(--line);border-radius:8px;background:#fafafa;cursor:pointer;flex:0 0 auto}
+.thumbs img.on{border-color:var(--g)}
+.pd h1{font-size:21px;margin:4px 0 8px;line-height:1.3}
+.big b{font-size:26px}
+.big s{font-size:15px}
+.big .pct{color:var(--g);font-weight:700}
+.note{font-size:12px;color:var(--mut)}
+.ul{list-style:none;padding:0;margin:12px 0;display:grid;gap:6px;font-size:13px}
+.ul li:before{content:"✓ ";color:var(--g);font-weight:700}
+.lbl{font-weight:600;font-size:13px;margin:14px 0 6px}
+.sz{display:flex;flex-wrap:wrap;gap:8px}
+.sz button{min-width:46px;padding:7px 12px;border:1.5px solid var(--line);background:#fff;border-radius:7px;font-weight:600}
+.sz button.on{border-color:var(--g);background:var(--gl);color:var(--g2)}
+.sz button:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.qty{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.qty button{border:0;background:#f1f3f4;width:34px;font-size:17px}
+.qty span{min-width:38px;text-align:center;padding:6px 0;font-weight:600}
+.act{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.act button{flex:1;min-width:140px;padding:12px;border-radius:8px;font-weight:700;font-size:15px}
+.b1{background:#fff;border:2px solid var(--g);color:var(--g)}
+.b2{background:var(--g);border:2px solid var(--g);color:#fff}
+.desc{white-space:pre-line;font-size:14px;line-height:1.55;color:#38424a;margin-top:6px}
+.sec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-top:16px}
+.sec h3{margin:0 0 6px;font-size:16px}
+.crumb{font-size:13px;color:var(--mut);margin-bottom:10px}
+.crumb a{color:var(--g)}
+/* cart */
+.cartw{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start}
+.ci{display:grid;grid-template-columns:84px 1fr auto;gap:12px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:10px;align-items:center}
+.ci img{width:84px;height:84px;object-fit:contain;background:#fafafa;border-radius:8px}
+.ci .t{font-size:14px;font-weight:600;line-height:1.3}
+.ci .m{font-size:12px;color:var(--mut);margin:3px 0 6px}
+.ci .rm{border:0;background:none;color:var(--red);font-size:12px;padding:4px 0}
+.sum{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;position:sticky;top:80px}
+.sum .row{display:flex;justify-content:space-between;margin:7px 0;font-size:14px}
+.sum .tot{font-size:18px;font-weight:700;border-top:1px solid var(--line);padding-top:10px;margin-top:10px}
+.sum .save{color:var(--g);font-weight:600}
+.po{width:100%;margin-top:14px;padding:13px;border:0;border-radius:8px;background:var(--g);color:#fff;font-weight:700;font-size:16px}
+.wa{width:100%;margin-top:10px;padding:12px;border:2px solid #25d366;border-radius:8px;background:#fff;color:#128c4b;font-weight:700}
+/* checkout handoff */
+.ho{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;max-width:760px;margin:auto}
+.ho h1{font-size:21px;margin:0 0 6px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:14px 0}
+.steps li{counter-increment:s;padding:8px 0 8px 38px;position:relative;font-size:14px}
+.steps li:before{content:counter(s);position:absolute;left:0;top:6px;width:26px;height:26px;border-radius:50%;background:var(--g);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
+.hi{display:grid;grid-template-columns:60px 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:9px;margin:8px 0}
+.hi img{width:60px;height:60px;object-fit:contain;background:#fafafa;border-radius:7px}
+.hi .go{background:var(--g);color:#fff;padding:9px 12px;border-radius:7px;font-weight:700;font-size:13px;white-space:nowrap}
+.hi.done{opacity:.55}
+.hi.done .go{background:#8a979e}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#1d2327;color:#fff;padding:11px 18px;border-radius:8px;font-size:14px;z-index:50;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+footer{background:#14211c;color:#cfd8d3;margin-top:30px;font-size:13px}
+footer .fw{max-width:1200px;margin:auto;padding:24px 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+footer b{color:#fff;display:block;margin-bottom:6px}
+footer a{color:#9fe0c3}
+.fwa{position:fixed;right:16px;bottom:16px;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px #0003;z-index:30}
+@media (max-width:820px){
+  .pd,.cartw{grid-template-columns:1fr}
+  .sum{position:static}
+  .brand small{display:none}
+  .cartbtn .lb{display:none}
+}
+@media (max-width:560px){
+  .hd{flex-wrap:wrap}
+  .search{order:3;flex-basis:100%}
+  .grid{grid-template-columns:repeat(2,1fr);gap:9px}
+  .ci{grid-template-columns:64px 1fr}
+  .ci img{width:64px;height:64px}
+  .ci .qwrap{grid-column:2}
+  .hi{grid-template-columns:52px 1fr}
+  .hi .go{grid-column:1/-1;text-align:center}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <a class="brand" href="#/"><img id="logo" alt=""><div><b>Batul Industries</b><small>Home &amp; Lifestyle, Delivered Free</small></div></a>
+    <form class="search" id="sf"><input id="q" placeholder="Search sarees, clocks, bottles…" aria-label="Search products"><button>Search</button></form>
+    <a class="cartbtn" href="#/cart" aria-label="Cart"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg><span class="lb">Cart</span><span class="n" id="cn" hidden>0</span></a>
+  </div>
+</header>
+<div class="strip"><div><b>No login needed</b> · Add to cart and send your order on WhatsApp 93591 35058 · <b>Free delivery</b> across India · Pay by UPI</div></div>
+<main id="app"><div class="load">Loading…</div></main>
+<footer><div class="fw">
+  <div><b>Batul Industries</b>Home, kitchen, bath and lifestyle products with free delivery across India.</div>
+  <div><b>Need help?</b>WhatsApp / Call: <a href="https://wa.me/919359135058" target="_blank" rel="noopener">93591 35058</a><br>Mon–Sat 9 AM–8 PM · Sun 10 AM–6 PM<br>Email: <a href="mailto:aq@aqbco.org">aq@aqbco.org</a></div>
+  <div><b>How to order</b>1. Add products to cart (no login)<br>2. Tap <b>Order on WhatsApp</b><br>3. Pay by UPI link and get free delivery</div>
+  <div><b>Policies</b><a href="https://batul-i.com/returns" target="_blank" rel="noopener">Returns</a> · <a href="https://batul-i.com/shipping" target="_blank" rel="noopener">Shipping</a> · <a href="https://batul-i.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy</a><br>Orders are placed and paid securely on batul-i.com</div>
+</div></footer>
+<a class="fwa" href="https://wa.me/919359135058" target="_blank" rel="noopener" aria-label="WhatsApp us"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg></a>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+var API="https://batul-i.com/api/v1", DOM="batul-i.com", STORE="https://batul-i.com", WA="919359135058";
+var app=document.getElementById("app");
+var state={cats:[],catById:{},store:null};
+
+// ---------- helpers ----------
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function inr(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
+function withGst(v,g){v=Number(v)||0;g=Number(g)||0;return v<=0?0:Math.round(g>0?v*(1+g/100):v)}
+function price(p){return withGst(p.rsp_org_selling_price,p.rsp_gst_percentage)}
+function mrp(p){return withGst(p.rsp_org_mrp,p.rsp_gst_percentage)}
+function pct(p){var m=mrp(p),s=price(p);return m>s&&m>0?Math.round((m-s)/m*100):0}
+function imgs(p){try{var a=JSON.parse(p.rsp_multi_images||"[]");if(a.length)return a}catch(e){}return p.rsp_img_path?[p.rsp_img_path]:[]}
+function api(path,params){
+  var u=new URL(API+path);params=params||{};params.domain=DOM;
+  Object.keys(params).forEach(function(k){if(params[k]!==undefined&&params[k]!==null&&params[k]!=="")u.searchParams.set(k,params[k])});
+  return fetch(u.toString()).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()});
+}
+var toastT;function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove("on")},2200)}
+
+// ---------- cart (kept in this browser only) ----------
+var CK="batul_mirror_cart_v1";
+function getCart(){try{return JSON.parse(localStorage.getItem(CK)||"[]")}catch(e){return memCart}}
+var memCart=[];
+function saveCart(c){memCart=c;try{localStorage.setItem(CK,JSON.stringify(c))}catch(e){}badge()}
+function badge(){var n=getCart().reduce(function(a,i){return a+i.qty},0),el=document.getElementById("cn");el.textContent=n;el.hidden=!n}
+function addToCart(p,size,qty){
+  var c=getCart(),key=p.rsp_slug_url+"|"+(size||"");
+  var ex=c.filter(function(i){return i.key===key})[0];
+  if(ex)ex.qty=Math.min(ex.qty+qty,ex.max||99);
+  else c.push({key:key,slug:p.rsp_slug_url,id:p.rsp_id,title:p.rsp_title,img:p.rsp_img_path,price:price(p),mrp:mrp(p),size:size||"",qty:qty,max:99});
+  saveCart(c);toast("Added to cart");
+}
+
+// ---------- product card ----------
+function card(p){
+  var o=pct(p),r=Number(p.rsp_rating)||0;
+  return '<div class="pc"><a href="#/p/'+esc(p.rsp_slug_url)+'"><div class="im">'+(o?'<span class="off">'+o+'% off</span>':'')+
+    '<img loading="lazy" src="'+esc(p.rsp_img_path)+'" alt="'+esc(p.rsp_title)+'"></div></a><div class="bd">'+
+    '<a class="t" href="#/p/'+esc(p.rsp_slug_url)+'">'+esc(p.rsp_title)+'</a>'+
+    '<div class="pr"><b>'+inr(price(p))+'</b>'+(o?'<s>'+inr(mrp(p))+'</s>':'')+'</div>'+
+    (r?'<div class="rt"><i>'+r.toFixed(1)+' ★</i>'+(p.rsp_reviews?p.rsp_reviews+' ratings':'')+'</div>':'')+
+    '<a class="qa" href="#/p/'+esc(p.rsp_slug_url)+'" style="text-align:center">View &amp; add</a></div></div>';
+}
+
+// ---------- listing (home / category / search) ----------
+function catsBar(active){
+  return '<div class="cats">'+state.cats.map(function(c){
+    return '<a class="cat'+(String(c.category_id)===String(active)?' on':'')+'" href="#/c/'+c.category_id+'"><img loading="lazy" src="'+esc(c.category_image)+'" alt=""><span>'+esc(c.category_name)+'</span></a>'}).join("")+'</div>';
+}
+function banners(){
+  var b=(state.store&&state.store.configuration&&state.store.configuration.homeBanners&&state.store.configuration.homeBanners.banners)||[];
+  if(!b.length)return "";
+  return '<div class="banners">'+b.slice().sort(function(a,c){return a.sortOrder-c.sortOrder}).map(function(x){
+    return '<a class="bn" href="#/c/'+x.category_id+'"><div><small>'+esc(x.kicker)+'</small><h3>'+esc(x.title)+'</h3><span>'+esc(x.ctaText||"Shop now")+'</span></div><img src="'+esc(x.image)+'" alt=""></a>'}).join("")+'</div>';
+}
+function listing(opts){
+  var title=opts.title, params=opts.params, page=1, seed=Math.floor(Math.random()*1e9);
+  app.innerHTML=(opts.home?banners():"")+catsBar(params.category_id)+'<h2>'+esc(title)+' <small id="cnt"></small></h2><div class="grid" id="g"></div><div id="mw"></div>';
+  var g=document.getElementById("g"),mw=document.getElementById("mw");
+  function load(){
+    mw.innerHTML='<div class="load">Loading products…</div>';
+    var p=Object.assign({page:page,limit:24},params);if(!params.search)p.seed=seed;
+    api("/products/all",p).then(function(d){
+      var list=(d.data||[]).filter(function(x){return Number(x.rsp_status)===1});
+      if(page===1&&!list.length){g.outerHTML='<div class="empty">No products found. Try another search.</div>';mw.innerHTML="";return}
+      g.insertAdjacentHTML("beforeend",list.map(card).join(""));
+      document.getElementById("cnt").textContent=(d.total_count||"")+(d.total_count?" products":"");
+      mw.innerHTML=page<(d.total_pages||1)?'<button class="more" id="mb">Load more</button>':"";
+      var mb=document.getElementById("mb");if(mb)mb.onclick=function(){page++;load()};
+    }).catch(function(){mw.innerHTML='<div class="empty">Could not load products. <button class="more" id="rt">Try again</button></div>';document.getElementById("rt").onclick=load});
+  }
+  load();
+}
+
+// ---------- product page ----------
+function productPage(slug){
+  app.innerHTML='<div class="load">Loading product…</div>';
+  Promise.all([api("/products/product/"+encodeURIComponent(slug)),api("/products/product/"+encodeURIComponent(slug)+"/sizes").catch(function(){return{data:[]}})])
+  .then(function(rs){
+    var p=(rs[0].data||[])[0];if(!p){app.innerHTML='<div class="empty">This product is not available. <a href="#/" style="color:var(--g)">Back to shop</a></div>';return}
+    var sizes=(rs[1].data||[]),label=rs[1].attribute_label||"Size";
+    var ims=imgs(p),o=pct(p),r=Number(p.rsp_rating)||0,cat=state.catById[p.rsp_cat_id];
+    var avail=sizes.filter(function(s){return s.is_available});
+    var sel=avail.length===1?avail[0]:null, qty=1;
+    var stock=Number(p.ras_quantity)||0;
+    document.title=p.rsp_title+" – Batul Industries";
+    app.innerHTML='<div class="crumb"><a href="#/">Home</a>'+(cat?' › <a href="#/c/'+cat.category_id+'">'+esc(cat.category_name)+'</a>':'')+'</div>'+
+    '<div class="pd"><div class="gal"><div class="main"><img id="mi" src="'+esc(ims[0]||"")+'" alt="'+esc(p.rsp_title)+'"></div>'+
+      (ims.length>1?'<div class="thumbs">'+ims.map(function(u,i){return '<img src="'+esc(u)+'" data-i="'+i+'" class="'+(i?'':'on')+'" alt="">'}).join("")+'</div>':'')+'</div>'+
+    '<div><div class="note">Batul Industries'+(p.rsp_origin_country?' · Made in '+esc(p.rsp_origin_country):'')+'</div>'+
+      '<h1>'+esc(p.rsp_title)+'</h1>'+
+      (r?'<div class="rt"><i>'+r.toFixed(1)+' ★</i>'+(p.rsp_reviews?p.rsp_reviews+' ratings':'')+'</div>':'')+
+      '<div class="pr big" style="margin-top:10px"><b>'+inr(price(p))+'</b>'+(o?'<s>'+inr(mrp(p))+'</s><span class="pct">'+o+'% off</span>':'')+'</div>'+
+      '<div class="note">Inclusive of all taxes'+(o?' · You save '+inr(mrp(p)-price(p)):'')+'</div>'+
+      '<ul class="ul"><li>Free delivery on this item</li><li>Secure payment by UPI, cards &amp; net banking</li><li>7-day returns for manufacturing defects</li></ul>'+
+      (sizes.length?'<div class="lbl">'+esc(label)+':</div><div class="sz" id="sz">'+sizes.map(function(s){return '<button data-id="'+s.size_id+'" '+(s.is_available?'':'disabled title="Out of stock"')+' class="'+(sel&&sel.size_id===s.size_id?'on':'')+'">'+esc(s.size_name)+'</button>'}).join("")+'</div>':'')+
+      '<div class="lbl">Quantity</div><div class="qty"><button id="qm" aria-label="Less">−</button><span id="qv">1</span><button id="qp" aria-label="More">+</button></div>'+
+      (stock&&stock<=10?' <span class="note" style="color:var(--red)">Only '+stock+' left</span>':'')+
+      (stock<=0&&!avail.length?'<p style="color:var(--red);font-weight:600">Out of stock</p>':'')+
+      '<div class="act"><button class="b1" id="ac">Add to cart</button><button class="b2" id="bn">Order on WhatsApp</button></div><div class="note" style="margin-top:6px">No login needed. We confirm on WhatsApp and send a UPI payment link.</div>'+
+      '<div class="note" style="margin-top:10px">Questions? WhatsApp <a style="color:var(--g)" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent("Hi, I have a question about: "+p.rsp_title)+'">93591 35058</a></div>'+
+    '</div></div>'+
+    (p.rsp_description?'<div class="sec"><h3>About this item</h3><div class="desc">'+esc(p.rsp_description)+'</div></div>':'')+
+    (p.rsp_size_chart_image_url?'<div class="sec"><h3>Size chart</h3><img loading="lazy" src="'+esc(p.rsp_size_chart_image_url)+'" alt="Size chart" style="max-width:100%"></div>':'')+
+    '<h2>You may also like</h2><div class="grid" id="sim"></div>';
+    // gallery
+    var th=app.querySelectorAll(".thumbs img");th.forEach(function(t){t.onclick=function(){document.getElementById("mi").src=t.src;th.forEach(function(x){x.classList.remove("on")});t.classList.add("on")}});
+    // sizes
+    var sz=document.getElementById("sz");if(sz)sz.onclick=function(e){var b=e.target.closest("button");if(!b||b.disabled)return;sel=sizes.filter(function(s){return String(s.size_id)===b.dataset.id})[0];sz.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});qty=1;document.getElementById("qv").textContent=1};
+    function maxQ(){return sel?(sel.available_quantity||1):(stock||1)}
+    document.getElementById("qm").onclick=function(){qty=Math.max(1,qty-1);document.getElementById("qv").textContent=qty};
+    document.getElementById("qp").onclick=function(){qty=Math.min(maxQ(),qty+1);document.getElementById("qv").textContent=qty};
+    function ok(){
+      if(sizes.length&&!sel){toast("Please choose a "+label.toLowerCase());return false}
+      if(!sizes.length&&stock<=0){toast("Sorry, out of stock");return false}
+      return true;
+    }
+    document.getElementById("ac").onclick=function(){if(ok())addToCart(p,sel?sel.size_name:"",qty)};
+    document.getElementById("bn").onclick=function(){if(ok()){addToCart(p,sel?sel.size_name:"",qty);window.open(waLink(getCart()),"_blank","noopener");location.hash="#/cart"}};
+    // similar
+    api("/products/product/"+encodeURIComponent(slug)+"/similar",{limit:8}).then(function(d){
+      var l=(d.data||[]).filter(function(x){return x.rsp_slug_url&&x.rsp_slug_url!==slug});
+      if(!l.length&&p.rsp_cat_id)return api("/products/all",{page:1,limit:9,category_id:p.rsp_cat_id}).then(function(d2){return(d2.data||[]).filter(function(x){return x.rsp_slug_url!==slug})});
+      return l;
+    }).then(function(l){var s=document.getElementById("sim");if(s)s.innerHTML=(l||[]).slice(0,8).map(card).join("")||'<div class="note">—</div>'}).catch(function(){});
+    window.scrollTo(0,0);
+  }).catch(function(){app.innerHTML='<div class="empty">Could not load this product. Please check your internet and try again.</div>'});
+}
+
+// ---------- cart page ----------
+function cartPage(){
+  document.title="Your cart – Batul Industries";
+  var c=getCart();
+  if(!c.length){app.innerHTML='<div class="empty"><h2 style="justify-content:center">Your cart is empty</h2><a class="more" href="#/" style="display:inline-block">Continue shopping</a></div>';return}
+  var sub=0,mr=0,n=0;c.forEach(function(i){sub+=i.price*i.qty;mr+=Math.max(i.mrp,i.price)*i.qty;n+=i.qty});
+  app.innerHTML='<h2>Your cart <small>'+n+' item'+(n>1?'s':'')+'</small></h2><div class="cartw"><div>'+c.map(function(i,ix){
+    return '<div class="ci"><a href="#/p/'+esc(i.slug)+'"><img src="'+esc(i.img)+'" alt=""></a><div><a class="t" href="#/p/'+esc(i.slug)+'">'+esc(i.title)+'</a><div class="m">'+(i.size?'Size/option: '+esc(i.size)+' · ':'')+inr(i.price)+' each</div>'+
+    '<button class="rm" data-rm="'+ix+'">Remove</button></div><div class="qwrap"><div class="qty"><button data-d="'+ix+'" data-v="-1">−</button><span>'+i.qty+'</span><button data-d="'+ix+'" data-v="1">+</button></div><div style="font-weight:700;margin-top:6px;text-align:right">'+inr(i.price*i.qty)+'</div></div></div>'}).join("")+
+  '</div><div class="sum"><b>Order summary</b><div class="row"><span>Price ('+n+' item'+(n>1?'s':'')+')</span><span>'+inr(mr)+'</span></div>'+
+  (mr>sub?'<div class="row save"><span>Discount</span><span>−'+inr(mr-sub)+'</span></div>':'')+
+  '<div class="row"><span>Delivery</span><span class="save">FREE</span></div><div class="row tot"><span>Total</span><span>'+inr(sub)+'</span></div>'+
+  (mr>sub?'<div class="note save">You save '+inr(mr-sub)+' on this order</div>':'')+
+  '<button class="po" id="wa" style="background:#25d366">Order on WhatsApp (no login)</button>'+
+  '<div class="note" style="margin-top:6px">Your cart is sent to us on WhatsApp. We confirm stock and send a UPI payment link.</div>'+
+  '<button class="wa" id="po" style="border-color:var(--g);color:var(--g)">Or pay online on batul-i.com</button>'+
+  '<div class="note" style="margin-top:10px">Prices include GST. Online payment needs a one-time mobile code on batul-i.com.</div></div></div>';
+  app.onclick=function(e){
+    var b=e.target.closest("button");if(!b)return;var cc=getCart();
+    if(b.dataset.rm!==undefined){cc.splice(+b.dataset.rm,1);saveCart(cc);cartPage()}
+    else if(b.dataset.d!==undefined){var it=cc[+b.dataset.d];it.qty=Math.max(1,Math.min(99,it.qty+(+b.dataset.v)));saveCart(cc);cartPage()}
+  };
+  document.getElementById("po").onclick=function(){location.hash="#/checkout"};
+  document.getElementById("wa").onclick=function(){window.open(waLink(getCart()),"_blank","noopener")};
+  window.scrollTo(0,0);
+}
+function waLink(c){
+  var t="Hi Batul Industries, I want to order:\n",tot=0;
+  c.forEach(function(i,k){tot+=i.price*i.qty;t+="\n"+(k+1)+". "+i.title+(i.size?" ("+i.size+")":"")+" x "+i.qty+" = "+inr(i.price*i.qty)+"\n"+STORE+"/product/"+i.slug+"\n"});
+  t+="\nTotal: "+inr(tot)+" (free delivery)\nMy pincode: ";
+  return "https://wa.me/"+WA+"?text="+encodeURIComponent(t);
+}
+
+// ---------- checkout hand-off to batul-i.com ----------
+function checkoutPage(){
+  document.title="Complete your order – Batul Industries";
+  var c=getCart();if(!c.length){location.hash="#/cart";return}
+  var tot=c.reduce(function(a,i){return a+i.price*i.qty},0);
+  app.innerHTML='<div class="ho"><h1>Complete your order</h1><div class="note">Total '+inr(tot)+' · Free delivery</div>'+
+  '<ol class="steps"><li>Tap <b>Open &amp; buy</b> on the first item below. It opens on our secure checkout at batul-i.com.</li>'+
+  '<li>Choose the same size/option, tap <b>Add to cart</b>, and verify your mobile number once with the code sent on WhatsApp.</li>'+
+  '<li>Come back here, open the next item and tap <b>Add to cart</b>. You are already signed in, so no code is needed again.</li>'+
+  '<li>Open the cart on batul-i.com and pay by UPI, card or net banking.</li></ol>'+
+  c.map(function(i,k){return '<div class="hi" id="h'+k+'"><img src="'+esc(i.img)+'" alt=""><div><div style="font-weight:600;font-size:14px">'+esc(i.title)+'</div><div class="note">'+(i.size?'Choose: <b>'+esc(i.size)+'</b> · ':'')+'Qty <b>'+i.qty+'</b> · '+inr(i.price*i.qty)+'</div></div><a class="go" data-k="'+k+'" target="_blank" rel="noopener" href="'+STORE+'/product/'+esc(i.slug)+'">Open &amp; buy ›</a></div>'}).join("")+
+  (c.length>1?'<a class="go" style="display:block;text-align:center;margin-top:12px;padding:12px;background:var(--g2);color:#fff;border-radius:8px;font-weight:700" target="_blank" rel="noopener" href="'+STORE+'/cart">Go to cart on batul-i.com &amp; pay ›</a>':'')+
+  '<button class="wa" id="wa2" style="margin-top:16px">Need help? Send this order on WhatsApp</button>'+
+  '<p class="note" style="margin-top:12px"><a href="#/cart" style="color:var(--g)">‹ Back to cart</a> · <a href="#" id="clr" style="color:var(--mut)">I have placed my order (clear this cart)</a></p></div>';
+  app.onclick=function(e){var a=e.target.closest(".go[data-k]");if(a)document.getElementById("h"+a.dataset.k).classList.add("done")};
+  document.getElementById("wa2").onclick=function(){window.open(waLink(c),"_blank","noopener")};
+  document.getElementById("clr").onclick=function(e){e.preventDefault();saveCart([]);toast("Thank you for your order!");location.hash="#/"};
+  window.scrollTo(0,0);
+}
+
+// ---------- router ----------
+function route(){
+  app.onclick=null;
+  var h=decodeURIComponent(location.hash.replace(/^#\/?/,"")),parts=h.split("/");
+  document.title="Batul Industries – Home & Lifestyle, Delivered Free";
+  if(parts[0]==="p"&&parts[1])return productPage(parts.slice(1).join("/"));
+  if(parts[0]==="cart")return cartPage();
+  if(parts[0]==="checkout")return checkoutPage();
+  if(parts[0]==="c"&&parts[1]){var cat=state.catById[parts[1]];return listing({title:cat?cat.category_name:"Products",params:{category_id:parts[1]}})}
+  if(parts[0]==="s"&&parts[1]){document.getElementById("q").value=parts[1];return listing({title:'Results for "'+parts[1]+'"',params:{search:parts[1]}})}
+  listing({title:"All products",params:{},home:true});
+}
+document.getElementById("sf").onsubmit=function(e){e.preventDefault();var v=document.getElementById("q").value.trim();if(v)location.hash="#/s/"+encodeURIComponent(v)};
+window.addEventListener("hashchange",route);
+
+// ---------- boot ----------
+badge();
+Promise.all([api("/products/categories").catch(function(){return{data:[]}}),api("/store-info").catch(function(){return{data:null}})]).then(function(r){
+  state.cats=r[0].data||[];state.cats.forEach(function(c){state.catById[c.category_id]=c});
+  state.store=r[1].data;
+  if(state.store&&state.store.store_logo)document.getElementById("logo").src=state.store.store_logo;
+  route();
+});
+})();
+</script>
+</body>
+</html>
